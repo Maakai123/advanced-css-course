@@ -6,3 +6,128 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Lato", sans-serif;  /*The whole body will Inherite the font size*/
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color:#777;
+    padding:30px;
+   
+}
+
+.header {
+    height:95vh; /*This will not allow whole page to be full,
+    the space in the bottom*/
+    background-image: linear-gradient( 
+        to  right  bottom,
+    rgba(126, 213, 111, 0.8),
+    rgba(40, 180, 131, 0.8)),url(../img/hero.jpg); /*Add color to the bg-img*/
+    background-size: cover;
+    background-position: top;
+    clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+}
+
+.logo-container {
+    position: absolute;
+    top:40px;
+    left: 40px;
+}
+
+.logo{
+    height: 35px;
+}
+
+.text-conatiner{
+ position: absolute;
+ /*top: 40% relative to the parent(header), left:50%*/
+ top:40%;
+ left:50%; 
+
+ /*Center them, this will be in relative to the  individual elements span*/
+transform: translate(-50%, -50%); 
+}
+
+.heading-primary{
+ color:#fff;
+ text-transform: uppercase;
+ /*Stop anim from bouncing*/
+
+ backface-visibility: hidden;
+}
+
+.heading-primary-main{
+    display: block; /*Push span down(Inline element)*/
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+
+    /*Animation*/
+    animation-name: moveInLeft; /*Move to left*/
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+
+    /*
+    animation-deley: 3s delay anim for 3s;
+    animation-iteration-count:3 repeat anim 3 times b4 stoping
+    */
+}
+
+.heading-primary-sub{
+    display: block;
+    font-size:20px ;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation: moveInRight 1s ease-out;
+}
+
+/*Animation to the left */
+@keyframes moveInLeft {
+ /*start 0%*/
+ 0% {
+    opacity:0;/*Dont show at the start*/
+    transform:translateX(-100px) /*from left to right horizontal which is also -*/
+ } 
+ 
+ 80% {
+    transform: translateX(10px) /*move it to right a little before back to original position*/
+ }
+
+ /*end 100%*/
+ 100% {
+    opacity: 1;
+    transform: translate(0);
+ }
+ 
+}
+
+
+
+/*Animation to the right */
+@keyframes moveInRight {
+    /*start 0%*/
+    0% {
+       opacity:0;/*Dont show at the start*/
+       transform:translateX(100px) /*move from right to left horizontal which is also + */
+    } 
+    
+    80% {
+       transform: translateX(-10px) /*move it to left  a little before back to original position*/
+    }
+   
+    /*end 100%*/
+    100% {
+       opacity: 1;
+       transform: translate(0);
+    }
+    
+   }

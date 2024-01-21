@@ -1,0 +1,100 @@
+body{
+    font-family: "Lato", sans-serif;  /*The whole body will Inherite the font size*/
+    font-weight: 400;
+    /*font-size: 16px;*/
+    line-height: 1.7;
+    color:$color-grey-dark;
+    padding:3rem;
+   
+}
+
+/*Header = &, this will copy */
+
+
+
+.heading-primary{
+ color:$color-white;
+ text-transform: uppercase;
+ /*Stop anim from bouncing*/
+
+ backface-visibility: hidden;
+
+
+ &--main{
+    display: block; /*Push span down(Inline element)*/
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+
+    /*Animation*/
+    animation-name: moveInLeft; /*Move to left*/
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+
+    /*
+    animation-deley: 3s delay anim for 3s;
+    animation-iteration-count:3 repeat anim 3 times b4 stoping
+    */
+}
+
+ &--sub{
+    display: block;
+    font-size:2rem ;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation: moveInRight 1s ease-out;
+    margin-bottom: 5rem;
+}
+
+}
+
+
+.heading-secondary {
+    font-size:3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display:inline-block; /*div is block element,
+    note: without display inline block, the color will span to the end
+    */
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;  // remove green text
+    color:transparent;
+    letter-spacing:.2rem;
+    transition: all .2s;
+
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2)
+    }
+    
+}
+
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+.paragraph {
+    font-size: 1.6rem;
+
+    &:not(:last-child) { //add margin bottom to all except the last one
+        margin-bottom: 3rem;
+    }
+
+}
+
+
+.composition{
+    // position: relative; //Since all images will be absolute
+     &__photo { //composition__photo{}
+      background-color: red;
+     }
+ }
+ 
+ .composition__photo{
+     width: 10px;
+ }

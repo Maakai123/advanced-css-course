@@ -1,0 +1,58 @@
+
+/*Animation to the left */
+@keyframes moveInLeft {
+    /*start 0%*/
+    0% {
+       opacity:0;/*Dont show at the start*/
+       transform:translateX(-10rem) /*from left to right horizontal which is also -*/
+    } 
+    
+    80% {
+       transform: translateX(1rem) /*move it to right a little before back to original position*/
+    }
+   
+    /*end 100%*/
+    100% {
+       opacity: 1;
+       transform: translate(0);
+    }
+    
+   }
+   
+   
+   
+   /*Animation to the right */
+   @keyframes moveInRight {
+       /*start 0%*/
+       0% {
+          opacity:0;/*Dont show at the start*/
+          transform:translateX(10rem) /*move from right to left horizontal which is also + */
+       } 
+       
+       80% {
+          transform: translateX(-1rem) /*move it to left  a little before back to original position*/
+       }
+      
+       /*end 100%*/
+       100% {
+          opacity: 1;
+          transform: translate(0);
+       }
+       
+      }
+   
+   
+   
+      @keyframes moveInBottom{
+       /*start 0%*/
+       0% {
+          opacity:0;/*Dont show at the start*/
+          transform:translateY(3rem) /*move from TOP to Bottom vertical which is also + */
+       } 
+        /*end 100%*/
+       100% {
+          opacity: 1;
+          transform: translate(0);
+       }
+       
+      }

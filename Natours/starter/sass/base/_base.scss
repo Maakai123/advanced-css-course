@@ -1,0 +1,21 @@
+
+/*after and befor pseodo class to get everything in the universal selector*/
+
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+ font-size: 62.5% /*100px / 16*/
+}
+
+body{
+    box-sizing: border-box;
+   
+}

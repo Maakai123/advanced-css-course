@@ -1,0 +1,38 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variable";
+
+
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+
+@import "layout/header";
+
+@import "component/buttons";
+@import 'component/composition';
+@import 'component/feature-box'; 
+@import "pages/home";
+@import "layout/grid"
+
+
+
+
+
+
+
+
+
+
+

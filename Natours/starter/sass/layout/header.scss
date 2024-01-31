@@ -7,6 +7,7 @@
     rgba($color-primary-dark, 0.8)),url(../img/hero.jpg); /*Add color to the bg-img*/
     background-size: cover;
     background-position: top;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); //work across all browsers
     clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
 
@@ -33,5 +34,8 @@
        
        text-align: center;
        }
+
+
+       
        
 }

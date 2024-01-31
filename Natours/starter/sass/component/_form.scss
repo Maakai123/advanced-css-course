@@ -1,0 +1,55 @@
+.form{
+    //put margin or space between all group apart from the last one
+  
+    &__group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__input {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color-white, .5);
+        border:none;
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+
+        &:focus { //when you click inside the input, it changes color with border
+            //to remove it
+          outline:none;
+          box-shadow: 0 1rem 2rem rgba($color-black, .1);
+          border-bottom: 3px solid $color-primary;
+        }
+          //When you type and its invalid show this color
+
+          &:focus:invalid {
+            border-bottom: 3px solid $color-secondary-dark;
+          }
+    
+        &::-webkit-input-placeholder { //Sudo element with two colon :: represent things on the web page
+           color:$color-grey-dark-2
+        }
+
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        display: block;
+        margin-top: .7rem;
+        transition: all .3s;
+    }
+
+      // Adjacent sibling + the first sibling that comes after form__input and form__label
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+   
+}

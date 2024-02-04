@@ -1,4 +1,7 @@
-.btn {
+ .btn {
+
+    //<button> element dont have link and visited sudo classes, do that wont bwork
+    &, //= button inherite all
     &:link,
     &:visited{
         text-transform: uppercase;
@@ -9,6 +12,10 @@
         transition: all .2s;
         font-size: $default-font-size; //1.6rem;
         position: relative;
+
+        //Chnage for the <button> element
+        border: none;
+        cursor: pointer;
     }
 
     &:hover {
@@ -22,7 +29,7 @@
     }
     
     &:active,
-    &:focus {
+    &:focus { //when clicking and its showing focus
         outline: none;
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black,.2);

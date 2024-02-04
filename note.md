@@ -71,10 +71,13 @@ npm install node-sass --save-dev
 create sass folder
 create sass file => touch main.scss  sassy css
 
-npm run compile: sass
+npm run compile:sass
+
 incase of issues
+
 npm install node-sass
 
+use coverr.co to get videos
 
 touch _variable.scss   _mixins.scss _functions.scsss to create folders in terminal
 
@@ -82,6 +85,7 @@ touch _variable.scss   _mixins.scss _functions.scsss to create folders in termin
 
 
 html Entity Reference ccs Tricks
+use easings.net for cubic and easing function or cubic-bezzier.com
 
 /*
 COLORS:
